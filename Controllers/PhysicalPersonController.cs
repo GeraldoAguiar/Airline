@@ -76,7 +76,8 @@ namespace AIRLINE.API.Controllers;
                 PostedAt = DateTime.Now,
                 RG = model.RG,
                 BirthDate = model.BirthDate
-            }; 
+            };
+      
         try 
         {
             await context.Physical.AddAsync(client);

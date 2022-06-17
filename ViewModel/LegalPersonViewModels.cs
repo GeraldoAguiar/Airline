@@ -11,8 +11,10 @@ namespace AIRLINE.API.ViewModel
     [Required(ErrorMessage = "Campo Obrigatório")]
     [MinLength(2, ErrorMessage = "'Nome' precisa conter um mínimo de 2 caracteres.")]
     public string Name { get; set; }
-
-    [Required(ErrorMessage = "Campo Obrigatório")]
+    
+    [Required(ErrorMessage ="Campo Obrigatório")]
+    [ValidChars(ValidChars: "-.0123456789", ErrorMessage = "Cnpj inválido")]
+    [ValidCnpj(ErrorMessage = "Cnpj inválido")]
     public string CNPJ { get; set; }
 
     [DisplayName("Telefone")]
